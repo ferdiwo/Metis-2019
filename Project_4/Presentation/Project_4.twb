@@ -1,0 +1,1023 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20192.19.0718.1543                               -->
+<workbook source-build='2019.2.2 (20192.19.0718.1543)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Feature Importance' inline='true' name='federated.12lqgkl0r60bc01g28kpn0fk7846' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Bitcoin_prices' name='textscan.1u9oxib1pd735p1d4xuz90snx0bi'>
+            <connection class='textscan' directory='/Users/ferdinandwohlenberg/Desktop/Projects/Project_4/Graphs' filename='Bitcoin_prices.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1u9oxib1pd735p1d4xuz90snx0bi' name='Feature_Importance.csv' table='[Feature_Importance#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='feature' ordinal='1' />
+            <column datatype='real' name='importance' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Feature_Importance.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Feature_Importance.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>feature</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[feature]</local-name>
+            <parent-name>[Feature_Importance.csv]</parent-name>
+            <remote-alias>feature</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>importance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[importance]</local-name>
+            <parent-name>[Feature_Importance.csv]</parent-name>
+            <remote-alias>importance</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Feature' datatype='string' name='[feature]' role='dimension' type='nominal' />
+      <column caption='Importance' datatype='real' name='[importance]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/ferdinandwohlenberg/Documents/My Tableau Repository/Datasources/Feature Iportance.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='08/22/2019 02:03:12 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='Feature Importance' increment-value='%null%' refresh-type='create' rows-inserted='43' timestamp-start='2019-08-22 02:03:12.268' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Feature_Importance.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>43</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>feature</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[feature]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>feature</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Feature_Importance.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>43</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>importance</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[importance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>importance</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Feature_Importance.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>30</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.462766' measure-ordering='alphabetic' measure-percentage='0.537234' show-structure='true' />
+      <date-options start-of-week='monday' />
+    </datasource>
+    <datasource caption='Topic_TIme_Graph' inline='true' name='federated.0ypmrfg17czc6f11ajoae19n4ev4' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Prices_dates' name='textscan.12ulv8n08wfgvz1e34pqq0wajmju'>
+            <connection class='textscan' directory='/Users/ferdinandwohlenberg/Desktop/Projects/Project_4/Graphs' filename='Prices_dates.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.12ulv8n08wfgvz1e34pqq0wajmju' name='topic_time_graph.csv' table='[topic_time_graph#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='Blockchain News' ordinal='1' />
+            <column datatype='integer' name='Cryptocurrency' ordinal='2' />
+            <column datatype='integer' name='Market' ordinal='3' />
+            <column datatype='date' name='Day' ordinal='4' />
+            <column datatype='real' name='Close' ordinal='5' />
+            <column datatype='real' name='pos_neg_ratio_month' ordinal='6' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[topic_time_graph.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[topic_time_graph.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Blockchain News</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Blockchain News]</local-name>
+            <parent-name>[topic_time_graph.csv]</parent-name>
+            <remote-alias>Blockchain News</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cryptocurrency</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Cryptocurrency]</local-name>
+            <parent-name>[topic_time_graph.csv]</parent-name>
+            <remote-alias>Cryptocurrency</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Market</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Market]</local-name>
+            <parent-name>[topic_time_graph.csv]</parent-name>
+            <remote-alias>Market</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Day</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Day]</local-name>
+            <parent-name>[topic_time_graph.csv]</parent-name>
+            <remote-alias>Day</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Close</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Close]</local-name>
+            <parent-name>[topic_time_graph.csv]</parent-name>
+            <remote-alias>Close</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pos_neg_ratio_month</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pos_neg_ratio_month]</local-name>
+            <parent-name>[topic_time_graph.csv]</parent-name>
+            <remote-alias>pos_neg_ratio_month</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Blockchain News]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Close]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Cryptocurrency]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Market]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' caption='Pos Neg Ratio Month' datatype='real' name='[pos_neg_ratio_month]' role='dimension' type='quantitative' />
+      <column-instance column='[Blockchain News]' derivation='Sum' name='[sum:Blockchain News:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Close]' derivation='Sum' name='[sum:Close:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Cryptocurrency]' derivation='Sum' name='[sum:Cryptocurrency:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Market]' derivation='Sum' name='[sum:Market:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.425532' measure-ordering='alphabetic' measure-percentage='0.574468' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[sum:Blockchain News:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[avg:Close:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[sum:Close:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[sum:Market:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[sum:Cryptocurrency:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <date-options start-of-week='monday' />
+    </datasource>
+    <datasource caption='Topic_time' inline='true' name='federated.0fcne8x1sza65211t8oo10uvr19s' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Topic_time_graph' name='textscan.15uyrdm0w14fg511m9oxm0aq2fs5'>
+            <connection class='textscan' directory='/Users/ferdinandwohlenberg/Desktop/Projects/Project_4/Graphs' filename='Topic_time_graph.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='Pos_neg_ratio_month' name='textscan.1rfjq4206kuqbm14zj3us10knxvg'>
+            <connection class='textscan' directory='/Users/ferdinandwohlenberg/Desktop/Projects/Project_4/Graphs' filename='Pos_neg_ratio_month.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.15uyrdm0w14fg511m9oxm0aq2fs5' name='SVI_Price.csv' table='[SVI_Price#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='date' name='Day' ordinal='1' />
+            <column datatype='real' name='SVI' ordinal='2' />
+            <column datatype='real' name='Close' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[SVI_Price.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[SVI_Price.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Day</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Day]</local-name>
+            <parent-name>[SVI_Price.csv]</parent-name>
+            <remote-alias>Day</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SVI</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SVI]</local-name>
+            <parent-name>[SVI_Price.csv]</parent-name>
+            <remote-alias>SVI</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Close</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Close]</local-name>
+            <parent-name>[SVI_Price.csv]</parent-name>
+            <remote-alias>Close</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[avg:pos_neg_ratio_month:qk]&quot;' value='Average Positive/Negative Ratio' />
+        </aliases>
+      </column>
+      <column datatype='real' name='[Close]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='real' name='[SVI]' role='measure' type='quantitative' />
+      <column-instance column='[Close]' derivation='Attribute' name='[attr:Close:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Close]' derivation='Avg' name='[avg:Close:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SVI]' derivation='Count' name='[cnt:SVI:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SVI]' derivation='None' name='[none:SVI:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Close]' derivation='Sum' name='[sum:Close:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SVI]' derivation='Sum' name='[sum:SVI:qk]' pivot='key' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/ferdinandwohlenberg/Documents/My Tableau Repository/Datasources/Topic_time_graph.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Topic_time_graph.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>54</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Blockchain News</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Blockchain News]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Blockchain News</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Topic_time_graph.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>54</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cryptocurrency</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Cryptocurrency]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cryptocurrency</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Topic_time_graph.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Market</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Market]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Market</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Topic_time_graph.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>54</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Day</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Day</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Topic_time_graph.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>54</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Close</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Close]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Close</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Topic_time_graph.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>54</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pos_neg_ratio_month</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pos_neg_ratio_month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pos_neg_ratio_month</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Topic_time_graph.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.332149' measure-ordering='alphabetic' measure-percentage='0.667851' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[attr:Blockchain News:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[attr:Close:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[avg:Blockchain News:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[avg:Close:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[none:Blockchain News:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[sum:Blockchain News:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[sum:Close:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[avg:pos_neg_ratio_month:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[sum:pos_neg_ratio_month:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[attr:Close:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[avg:Close:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[avg:pos_neg_ratio_month:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[sum:Close:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[attr:Market:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[avg:Market:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[none:Market:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[sum:Market:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[attr:Cryptocurrency:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[avg:Cryptocurrency:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[cnt:SVI:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[none:Cryptocurrency:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[none:SVI:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[sum:Cryptocurrency:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[sum:SVI:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <date-options start-of-week='monday' />
+      <datasource-dependencies datasource='federated.0ypmrfg17czc6f11ajoae19n4ev4'>
+        <column datatype='real' name='[Close]' role='measure' type='quantitative' />
+        <column-instance column='[Close]' derivation='Sum' name='[sum:Close:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+    </datasource>
+  </datasources>
+  <datasource-relationships>
+    <datasource-relationship source='federated.0fcne8x1sza65211t8oo10uvr19s' target='federated.0ypmrfg17czc6f11ajoae19n4ev4'>
+      <column-mapping />
+    </datasource-relationship>
+  </datasource-relationships>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Topic_time' name='federated.0fcne8x1sza65211t8oo10uvr19s' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0fcne8x1sza65211t8oo10uvr19s'>
+            <column datatype='integer' name='[F1]' role='measure' type='quantitative' />
+            <column-instance column='[F1]' derivation='Quarter-Trunc' name='[tqr:F1:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0fcne8x1sza65211t8oo10uvr19s].[:Measure Names]'>
+            <groupfilter function='empty-level' member='[:Measure Names]' user:op='manual' />
+          </filter>
+          <slices>
+            <column>[federated.0fcne8x1sza65211t8oo10uvr19s].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0fcne8x1sza65211t8oo10uvr19s].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0fcne8x1sza65211t8oo10uvr19s].[Multiple Values]</rows>
+        <cols>([federated.0fcne8x1sza65211t8oo10uvr19s].[tqr:F1:ok] / [federated.0fcne8x1sza65211t8oo10uvr19s].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{096630B9-2ECA-4B34-86DC-5076256E1019}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Topic Distribution (2016-2019)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Topic_time' name='federated.0fcne8x1sza65211t8oo10uvr19s' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0fcne8x1sza65211t8oo10uvr19s'>
+            <column datatype='integer' name='[F1]' role='measure' type='quantitative' />
+            <column-instance column='[F1]' derivation='Quarter-Trunc' name='[tqr:F1:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0ypmrfg17czc6f11ajoae19n4ev4' />
+          <filter class='categorical' column='[federated.0fcne8x1sza65211t8oo10uvr19s].[:Measure Names]'>
+            <groupfilter function='empty-level' member='[:Measure Names]' user:op='manual' />
+          </filter>
+          <manual-sort column='[federated.0fcne8x1sza65211t8oo10uvr19s].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[sum:Blockchain News:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[sum:Cryptocurrency:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0fcne8x1sza65211t8oo10uvr19s].[sum:Market:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[avg:pos_neg_ratio_month:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0fcne8x1sza65211t8oo10uvr19s].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='9' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0fcne8x1sza65211t8oo10uvr19s].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0fcne8x1sza65211t8oo10uvr19s].[Multiple Values]</rows>
+        <cols>[federated.0fcne8x1sza65211t8oo10uvr19s].[tqr:F1:ok]</cols>
+      </table>
+      <simple-id uuid='{49C2F64C-7D89-4E14-9D5D-593C2586D54E}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Feature Importance Light GBM</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Feature Importance' name='federated.12lqgkl0r60bc01g28kpn0fk7846' />
+          </datasources>
+          <datasource-dependencies datasource='federated.12lqgkl0r60bc01g28kpn0fk7846'>
+            <column caption='Feature' datatype='string' name='[feature]' role='dimension' type='nominal' />
+            <column caption='Importance' datatype='real' name='[importance]' role='measure' type='quantitative' />
+            <column-instance column='[feature]' derivation='None' name='[none:feature:nk]' pivot='key' type='nominal' />
+            <column-instance column='[importance]' derivation='Sum' name='[sum:importance:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.12lqgkl0r60bc01g28kpn0fk7846].[none:feature:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.12lqgkl0r60bc01g28kpn0fk7846].[sum:importance:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.12lqgkl0r60bc01g28kpn0fk7846].[sum:importance:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.12lqgkl0r60bc01g28kpn0fk7846].[none:feature:nk]</rows>
+        <cols>[federated.12lqgkl0r60bc01g28kpn0fk7846].[sum:importance:qk]</cols>
+      </table>
+      <simple-id uuid='{4940385C-0539-41BB-A11A-CAACFEE76380}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Topic Distribution &amp; Price (2016-2019)&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Topic_TIme_Graph' name='federated.0ypmrfg17czc6f11ajoae19n4ev4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ypmrfg17czc6f11ajoae19n4ev4'>
+            <column datatype='integer' name='[Blockchain News]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Close]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Cryptocurrency]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Day]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Market]' role='measure' type='quantitative' />
+            <column-instance column='[Blockchain News]' derivation='Sum' name='[sum:Blockchain News:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Close]' derivation='Sum' name='[sum:Close:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Cryptocurrency]' derivation='Sum' name='[sum:Cryptocurrency:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Market]' derivation='Sum' name='[sum:Market:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Day]' derivation='Quarter-Trunc' name='[tqr:Day:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ypmrfg17czc6f11ajoae19n4ev4].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[sum:Blockchain News:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[sum:Cryptocurrency:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[sum:Market:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0ypmrfg17czc6f11ajoae19n4ev4].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[sum:Blockchain News:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[sum:Cryptocurrency:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[sum:Market:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0ypmrfg17czc6f11ajoae19n4ev4].[sum:Close:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0ypmrfg17czc6f11ajoae19n4ev4].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0ypmrfg17czc6f11ajoae19n4ev4].[sum:Close:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.0ypmrfg17czc6f11ajoae19n4ev4].[tqr:Day:qk]' scope='cols' value='Quarterly Period' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ypmrfg17czc6f11ajoae19n4ev4].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ypmrfg17czc6f11ajoae19n4ev4].[Multiple Values]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.0ypmrfg17czc6f11ajoae19n4ev4].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ypmrfg17czc6f11ajoae19n4ev4].[sum:Close:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ypmrfg17czc6f11ajoae19n4ev4].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0ypmrfg17czc6f11ajoae19n4ev4].[Multiple Values] + [federated.0ypmrfg17czc6f11ajoae19n4ev4].[sum:Close:qk])</rows>
+        <cols>[federated.0ypmrfg17czc6f11ajoae19n4ev4].[tqr:Day:qk]</cols>
+      </table>
+      <simple-id uuid='{4EB60AE6-CAD4-49F3-A5DC-EB782643049E}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Closing Price &amp; SVI</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Topic_time' name='federated.0fcne8x1sza65211t8oo10uvr19s' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0fcne8x1sza65211t8oo10uvr19s'>
+            <column datatype='real' name='[Close]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Day]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[SVI]' role='measure' type='quantitative' />
+            <column-instance column='[Close]' derivation='Sum' name='[sum:Close:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[SVI]' derivation='Sum' name='[sum:SVI:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Day]' derivation='Day-Trunc' name='[tdy:Day:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0fcne8x1sza65211t8oo10uvr19s].[tdy:Day:qk]' scope='cols' value='Day' />
+            <encoding attr='space' class='0' field='[federated.0fcne8x1sza65211t8oo10uvr19s].[sum:SVI:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0fcne8x1sza65211t8oo10uvr19s].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0fcne8x1sza65211t8oo10uvr19s].[sum:SVI:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0fcne8x1sza65211t8oo10uvr19s].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0fcne8x1sza65211t8oo10uvr19s].[sum:Close:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0fcne8x1sza65211t8oo10uvr19s].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0fcne8x1sza65211t8oo10uvr19s].[sum:Close:qk] + [federated.0fcne8x1sza65211t8oo10uvr19s].[sum:SVI:qk])</rows>
+        <cols>[federated.0fcne8x1sza65211t8oo10uvr19s].[tdy:Day:qk]</cols>
+      </table>
+      <simple-id uuid='{81D05461-3C62-4383-91AB-11E3527A15E7}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='72'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0fcne8x1sza65211t8oo10uvr19s].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{DAB8B736-196B-459B-9B67-EA91877A3DD3}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='122'>
+            <card pane-specification-id='9' param='[federated.0fcne8x1sza65211t8oo10uvr19s].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3BB3DF74-8630-470A-AD56-7E258E34F039}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.12lqgkl0r60bc01g28kpn0fk7846].[sum:importance:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8727D4C9-F082-46ED-9704-89A4695AF267}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0ypmrfg17czc6f11ajoae19n4ev4].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{5CD6AC18-1362-4C86-9562-8BCE6CA9B412}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{77E99AF3-9C3B-466D-A854-33509CB0AD49}' />
+    </window>
+  </windows>
+</workbook>

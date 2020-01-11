@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select,textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+select {
+  width: 20%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  text-align-last: center
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #adaaaa;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+
+input[type=submit]:hover {
+  background-color: #db1212;
+  color: white;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<div id="header">
+  <img src="/static/Images/unnamed.jpg" alt="" WIDTH=150 HEIGHT=100>
+</div>
+<h1>Recommendation System</h1>
+<form action="/recommendations" method="POST">
+  Input<br>
+  <input type="text" name="Input" style="height:100px" placeholder="Text, Keywords, Link">
+  <br>
+  <br>
+  Number of Recommendations<br>
+  <select id="Number" name="numbers">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+  </select>
+  <br>
+  <br>
+  Sort by:<br>
+  <select id="Sort" name="Sort">
+        <option value="Relevance">Relevance</option>
+        <option value="Views">Views</option>
+        <option value="Upload Date">Upload Date</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit" method="get">
+</form>
+
+{% endblock %}

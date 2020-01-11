@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>TED Recommender</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+a {
+  background-color: #adaaaa;
+  color: white;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+  text-decoration: none;
+}
+a:hover {
+  background-color: #db1212;
+  color: white;
+}
+
+</style>
+{% endblock %}
+
+{% block body %}
+<div id="header">
+  <img src="/static/Images/unnamed.jpg" alt="" WIDTH=150 HEIGHT=100>
+</div>
+<div class="content">
+  <h1>Recommendations</h1>
+  {% if not predictions %}
+    <p>No Recommendations found! Please rephrase your wording</p>
+    <a href="/home">Start again</a>
+  {% else %}
+    <table>
+      <tr>
+        <th>iD</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Event Date</th>
+        <th>Link</th>
+      </tr>
+      {% for count in counts %}
+        <tr>
+          <td>{{ (count+1) }}</td>
+          <td>{{ predictions[count][0] }}</td>
+          <td>{{ predictions[count][2] }}</td>
+          <td>{{ predictions[count][3] }}</td>
+          <td>
+            <a href="{{ predictions[count][1] }}">Watch</a>
+            <br>
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+    <br>
+    <br>
+    <a href="/">Go Back</a>
+  {% endif %}
+
+
+</div>
+{% endblock %}
